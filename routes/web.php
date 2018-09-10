@@ -11,6 +11,15 @@
 |
 */
 
-Route::get('/', function () {
+use Illuminate\Routing\Route;
+use Illuminate\Routing\Router;
+
+Router::get('/', function () {
     return view('welcome');
 });
+
+Router::get('/index',
+    [ 'as' => 'home',
+      'uses' => 'PageController@getIndex'       
+    ]
+);
