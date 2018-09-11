@@ -23,3 +23,43 @@ Router::get('/index',
       'uses' => 'PageController@getIndex'       
     ]
 );
+
+Router::get('/product-type/{type}',
+    [ 'as' => 'product-type',
+      'uses' => 'PageController@getProductType'
+    ]
+);
+
+Router::get('/product-detail/{id}',
+    [ 'as' => 'product-detail',
+      'uses' => 'PageController@getProductDetail'
+    ]
+);
+
+
+
+Router::get('/about',
+    [ 'as' => 'about',
+      'uses' => 'PageController@getAbout'
+    ]
+);
+
+Router::get('/contact',
+    [ 'as' => 'contact',
+        'uses' => 'PageController@getContact'
+    ]
+);
+
+Router::get('/add-to-cart/{id}',
+    [
+        'as' => 'addcart',
+        'uses' => 'PageController@addToCart'
+    ]    
+);
+
+Router::get('/delete-one-cart/{id}',
+    [
+        'as' => 'delonecart',
+        'uses' => 'PageController@delCartOne'
+    ]    
+);
